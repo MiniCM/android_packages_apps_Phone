@@ -1248,7 +1248,8 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                         // Qtherwise, turn screen on immediately
                         int flags =
                             (screenOnImmediately ? 0 : PowerManager.WAIT_FOR_PROXIMITY_NEGATIVE);
-                        mProximityWakeLock.release(flags);
+                        //mProximityWakeLock.release(flags);
+                        mProximityWakeLock.release(0);
                     } else {
                         if (VDBG) {
                             Log.d(LOG_TAG, "updateProximitySensorMode: lock already released.");
